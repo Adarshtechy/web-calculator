@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoCalc | Modern Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="calculator-header">
+            <div class="logo">
+                <i class="fas fa-calculator"></i>
+                <span>NeoCalc</span>
+            </div>
+            <div class="controls">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme" type="button">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="history-toggle" class="history-btn" aria-label="Toggle history" type="button">
+                    <i class="fas fa-history"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="calculator">
+            <div class="display-container">
+                <div class="history-display" id="history-display"></div>
+                <input type="text" class="display" disabled aria-label="Display field" id="display">
+                <div class="display-overlay"></div>
+            </div>
+
+            <div class="calculator-body">
+                <div class="history-panel" id="history-panel">
+                    <div class="history-header">
+                        <h3>Calculation History</h3>
+                        <button id="clear-history" class="clear-history-btn" type="button">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                    </div>
+                    <div class="history-list" id="history-list">
+                        <!-- History items will be added here -->
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button data-value="AC" type="button" class="btn operator ac">
+                        <span>AC</span>
+                    </button>
+                    <button type="button" class="btn operator del" data-value="DEL" aria-label="Delete" title="Delete">
+                        <span aria-hidden="true">
+                            <i class="fas fa-backspace"></i>
+                        </span>
+                    </button>
+                    <button data-value="%" type="button" class="btn operator">
+                        <span>%</span>
+                    </button>
+                    <button data-value="/" type="button" class="btn operator">
+                        <span>÷</span>
+                    </button>
+                    <button data-value="7" type="button" class="btn number">
+                        <span>7</span>
+                    </button>
+                    <button data-value="8" type="button" class="btn number">
+                        <span>8</span>
+                    </button>
+                    <button data-value="9" type="button" class="btn number">
+                        <span>9</span>
+                    </button>
+                    <button data-value="*" type="button" class="btn operator">
+                        <span>×</span>
+                    </button>
+                    <button data-value="4" type="button" class="btn number">
+                        <span>4</span>
+                    </button>
+                    <button data-value="5" type="button" class="btn number">
+                        <span>5</span>
+                    </button>
+                    <button data-value="6" type="button" class="btn number">
+                        <span>6</span>
+                    </button>
+                    <button data-value="-" type="button" class="btn operator">
+                        <span>−</span>
+                    </button>
+                    <button data-value="1" type="button" class="btn number">
+                        <span>1</span>
+                    </button>
+                    <button data-value="2" type="button" class="btn number">
+                        <span>2</span>
+                    </button>
+                    <button data-value="3" type="button" class="btn number">
+                        <span>3</span>
+                    </button>
+                    <button data-value="+" type="button" class="btn operator">
+                        <span>+</span>
+                    </button>
+                    <button data-value="0" type="button" class="btn number zero">
+                        <span>0</span>
+                    </button>
+                    <button data-value="." type="button" class="btn number">
+                        <span>.</span>
+                    </button>
+                    <button data-value="=" type="button" class="btn equals">
+                        <span>=</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <footer class="calculator-footer">
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-history"></i>
+                    <span>History</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-keyboard"></i>
+                    <span>Keyboard</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-palette"></i>
+                    <span>Themes</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="notification" id="notification"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
