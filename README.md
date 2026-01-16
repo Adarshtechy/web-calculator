@@ -1,4 +1,4 @@
-# Web Calculator
+## Web Calculator
 
 A modern and responsive web-based calculator built using HTML, CSS, and JavaScript.  
 This project focuses on clean UI design, usability, and interactive features commonly found in real-world calculator applications.
